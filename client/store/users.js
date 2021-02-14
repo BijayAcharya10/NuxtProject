@@ -2,24 +2,24 @@ export const state = () => ({
   users: [
     {
       id: 1,
-      name: "Bijay",
-      email: "bijay@gmail.com",
-      status: "Inactive",
-      mobile: "9867898438"
+      name: 'Bijay',
+      email: 'bijay@gmail.com',
+      status: 'Inactive',
+      mobile: '9867898438'
     },
     {
       id: 2,
-      name: "Sudeep",
-      email: "sudeep@gmail.com",
-      status: "Active",
-      mobile: "9854179845"
+      name: 'Sudeep',
+      email: 'sudeep@gmail.com',
+      status: 'Active',
+      mobile: '9854179845'
     },
     {
       id: 3,
-      name: "Aayan",
-      email: "aayanacharya@gmail.com",
-      status: "Active",
-      mobile: "9847621487"
+      name: 'Aayan',
+      email: 'aayanacharya@gmail.com',
+      status: 'Active',
+      mobile: '9847621487'
     }
   ]
 });

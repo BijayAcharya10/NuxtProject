@@ -208,8 +208,8 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
-import AppStatItem from "../components/AppStatItem.vue";
+import { mapGetters, mapMutations } from 'vuex';
+import AppStatItem from '../components/AppStatItem.vue';
 
 export default {
   components: {
@@ -219,29 +219,29 @@ export default {
     return {
       headers: [
         {
-          text: "Id",
-          value: "id"
+          text: 'Id',
+          value: 'id'
         },
         {
-          text: "Name",
-          value: "name"
+          text: 'Name',
+          value: 'name'
         },
         {
-          text: "Email",
-          value: "email"
+          text: 'Email',
+          value: 'email'
         },
         {
-          text: "Mobile",
-          value: "mobile"
+          text: 'Mobile',
+          value: 'mobile'
         },
         {
-          text: "Status",
-          value: "status"
+          text: 'Status',
+          value: 'status'
         },
         {
-          text: "Action",
+          text: 'Action',
           sortable: false,
-          value: "action"
+          value: 'action'
         }
       ],
       dialog: false,
@@ -250,44 +250,44 @@ export default {
       form: {},
       items: [],
       status: [
-        { text: "Active", value: true },
-        { text: "Inactive", value: false }
+        { text: 'Active', value: true },
+        { text: 'Inactive', value: false }
       ],
-      search: "",
+      search: '',
       type: {
-        total: "Total",
-        active: "Active",
-        inactive: "Inactive"
+        total: 'Total',
+        active: 'Active',
+        inactive: 'Inactive'
       },
       image: {
-        imgTotal: "study.svg",
-        imgActive: "customer.svg",
-        imgInactive: "cross.svg"
+        imgTotal: 'study.svg',
+        imgActive: 'customer.svg',
+        imgInactive: 'cross.svg'
       },
       statColor: {
-        totalColor: "light-blue",
-        activeColor: "green",
-        inactiveColor: "deep-orange"
+        totalColor: 'light-blue',
+        activeColor: 'green',
+        inactiveColor: 'deep-orange'
       }
     };
   },
   computed: {
     ...mapGetters({
-      getAllUsers: "users/getAll",
-      getCount: "users/getCount"
+      getAllUsers: 'users/getAll',
+      getCount: 'users/getCount'
     })
   },
   methods: {
     ...mapMutations({
-      addUser: "users/saveUser",
-      updateUser: "users/update",
-      deleteUser: "users/deleteUser"
+      addUser: 'users/saveUser',
+      updateUser: 'users/update',
+      deleteUser: 'users/deleteUser'
     }),
     getActiveCount() {
       let count = 0;
       let getUsers = this.getAllUsers;
       for (let i = 0; i < getUsers.length; i++) {
-        if (getUsers[i].status === "Active") {
+        if (getUsers[i].status === 'Active') {
           count++;
         }
       }
@@ -297,7 +297,7 @@ export default {
       let count = 0;
       let getUsers = this.getAllUsers;
       for (let i = 0; i < getUsers.length; i++) {
-        if (getUsers[i].status === "Inactive") {
+        if (getUsers[i].status === 'Inactive') {
           count++;
         }
       }
@@ -335,7 +335,7 @@ export default {
       }, 500);
     },
     onDeleteButtonClick(item, event) {
-      if (confirm("Are you sure you want to delete this item?")) {
+      if (confirm('Are you sure you want to delete this item?')) {
         setTimeout(() => {
           this.deleteUser(item.id);
         }, 500);

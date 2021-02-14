@@ -34,7 +34,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: "Stats"
+      default: 'Stats'
     },
     count: {
       type: Number,
@@ -42,11 +42,11 @@ export default {
     },
     src: {
       type: String,
-      default: "study.svg"
+      default: 'study.svg'
     },
     color: {
       type: String,
-      default: "light-blue"
+      default: 'light-blue'
     }
   }
 };

@@ -69,14 +69,14 @@ export default {
       fixed: false,
       items: [
         {
-          icon: "mdi-apps",
-          title: "Dashboard",
-          to: "/dashboard"
+          icon: 'mdi-apps',
+          title: 'Dashboard',
+          to: '/dashboard'
         },
         {
-          icon: "mdi-account-circle",
-          title: "Users",
-          to: "/users"
+          icon: 'mdi-account-circle',
+          title: 'Users',
+          to: '/users'
         }
       ],
       miniVariant: false
